@@ -71,7 +71,7 @@ const PROJ = {
       const inner = p.image
         ? `<img loading="lazy" src="${window.escapeHTML(p.image)}" alt="${window.escapeHTML(p.title)}">`
         : `<span>Figure placeholder</span>`;
-      media = `<div class="media-ph">${inner}</div>`;
+      media = `<div class="media-ph${p.image ? " media-ph--fig" : ""}">${inner}</div>`;
     }
 
     const el = document.createElement("article");

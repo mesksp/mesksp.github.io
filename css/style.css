@@ -508,6 +508,8 @@ ul.bullets li { list-style: disc; margin-bottom: var(--sp-2); color: var(--text)
   margin-bottom: var(--sp-6);
 }
 .feature-card .media-ph { aspect-ratio: 3 / 4; height: 100%; margin: 0; }
+.feature-card .media-ph--fig { aspect-ratio: auto; height: auto; align-self: start; background: #fff; }
+.feature-card .media-ph--fig img { width: 100%; height: auto; display: block; border-radius: var(--radius-sm); }
 .feature-card h3 { font-size: var(--fs-xl); }
 .feature-card .fc-block { margin-bottom: var(--sp-4); }
 .feature-card .fc-block h4 {
