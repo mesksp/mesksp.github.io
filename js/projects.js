@@ -59,17 +59,29 @@ const PROJ = {
     }
     if (p.links?.code)  actions.push(`<a class="btn btn--outline btn--sm" href="${p.links.code}" target="_blank" rel="noopener">Code</a>`);
     const vids = p.links?.videos?.length ? p.links.videos : (p.links?.video ? [{ label: "Video", src: p.links.video }] : []);
-    vids.forEach(v => actions.push(`<a class="btn btn--outline btn--sm" href="${window.escapeHTML(v.src)}" target="_blank" rel="noopener">${window.escapeHTML(v.label)}</a>`));
 
-    const mediaInner = p.image
-      ? `<img loading="lazy" src="${window.escapeHTML(p.image)}" alt="${window.escapeHTML(p.title)}">`
-      : `<span>Figure placeholder</span>`;
+    let media;
+    if (vids.length) {
+      const chips = vids.length > 1
+        ? `<div class="proj-video__tabs" role="group" aria-label="Choose video">${vids.map((v, i) =>
+            `<button type="button" class="proj-video__tab${i ? "" : " is-active"}" data-src="${window.escapeHTML(v.src)}">${window.escapeHTML(v.label)}</button>`).join("")}</div>`
+        : "";
+      media = `<div class="proj-video">
+        <video src="${window.escapeHTML(vids[0].src)}" muted loop playsinline controls preload="metadata" aria-label="${window.escapeHTML(p.title)} demonstration video"></video>
+        ${chips}
+      </div>`;
+    } else {
+      const inner = p.image
+        ? `<img loading="lazy" src="${window.escapeHTML(p.image)}" alt="${window.escapeHTML(p.title)}">`
+        : `<span>Figure placeholder</span>`;
+      media = `<div class="media-ph">${inner}</div>`;
+    }
 
     const el = document.createElement("article");
     el.className = "feature-card reveal";
     el.dataset.themes = (p.themes || []).join(" ");
     el.innerHTML = `
-      <div class="media-ph">${mediaInner}</div>
+      ${media}
       <div>
         <p class="card__meta">${window.escapeHTML(p.year || "")} · ${(p.themes || []).map(t => this.themeLabels[t] || t).join(" · ")}</p>
         <h3>${window.escapeHTML(p.title)}</h3>
@@ -84,7 +96,29 @@ const PROJ = {
         ${tech ? `<div class="fc-block"><h4>Technology Stack</h4><div class="pub__keywords">${tech}</div></div>` : ""}
         ${actions.length ? `<div class="pub__actions">${actions.join("")}</div>` : ""}
       </div>`;
+    this.bindVideo(el);
     return el;
+  },
+
+  /* Hover-to-play on pointer devices; the native play button works everywhere. */
+  bindVideo(el) {
+    const video = el.querySelector(".proj-video video");
+    if (!video) return;
+    const canHover = window.matchMedia("(hover: hover)").matches;
+    let manual = false;
+    video.addEventListener("click", () => { manual = true; });
+    video.addEventListener("pause", () => { manual = false; });
+    if (canHover) {
+      el.querySelector(".proj-video").addEventListener("mouseenter", () => { video.play().catch(() => {}); });
+      el.querySelector(".proj-video").addEventListener("mouseleave", () => { if (!manual) video.pause(); });
+    }
+    el.querySelectorAll(".proj-video__tab").forEach(tab => {
+      tab.addEventListener("click", () => {
+        el.querySelectorAll(".proj-video__tab").forEach(t => t.classList.toggle("is-active", t === tab));
+        video.src = tab.dataset.src;
+        video.play().catch(() => {});
+      });
+    });
   },
 
   render(list = this.data) {
