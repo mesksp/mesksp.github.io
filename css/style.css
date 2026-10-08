@@ -831,7 +831,7 @@ ul.bullets li { list-style: disc; margin-bottom: var(--sp-2); color: var(--text)
 .loading { color: var(--text-faint); font-size: var(--fs-sm); padding: var(--sp-5); }
 
 /* Justified body text (hyphenation keeps word spacing even) */
-main p, .pub__abstract, .fc-block p {
+main p, main li, main dd, .pub__abstract, .fc-block p {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
