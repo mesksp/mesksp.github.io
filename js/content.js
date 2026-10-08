@@ -1,5 +1,5 @@
 /* ==========================================================================
-   content.js  |  JSON-driven renderers for News, Gallery & Teaching
+   content.js  |  JSON-driven renderers for News & Gallery
    --------------------------------------------------------------------------
    Each renderer is a no-op unless its mount element is present on the page,
    so this single module can load everywhere. Adding news items, gallery
@@ -83,41 +83,11 @@ const GALLERY = {
   }
 };
 
-/* --------------------------- TEACHING ---------------------------------- */
-const TEACHING = {
-  async init() {
-    const taMount = document.getElementById("ta-list");
-    const priorMount = document.getElementById("prior-list");
-    if (!taMount && !priorMount) return;
-    try {
-      const json = await window.loadJSON("data/teaching.json");
-      if (taMount) taMount.innerHTML = this.cards(json.assistantships);
-      if (priorMount) priorMount.innerHTML = this.cards(json.prior_instruction);
-      requestAnimationFrame(() =>
-        document.querySelectorAll("#ta-list .reveal, #prior-list .reveal")
-          .forEach(n => n.classList.add("is-visible")));
-    } catch (err) {
-      if (taMount) taMount.innerHTML = `<div class="empty-state">Teaching data could not be loaded.</div>`;
-    }
-  },
-  cards(list) {
-    return (list || []).map(c => `
-      <article class="card reveal">
-        <p class="card__meta">${window.escapeHTML(c.level)} · ${window.escapeHTML(c.period)}</p>
-        <h3>${window.escapeHTML(c.course)}</h3>
-        <p style="color:var(--text-soft);font-size:var(--fs-sm);margin-bottom:8px;">${window.escapeHTML(c.institution)}</p>
-        <p>${window.escapeHTML(c.summary)}</p>
-      </article>`).join("");
-  }
-};
-
 document.addEventListener("DOMContentLoaded", () => {
   const limit = document.getElementById("news-list")?.dataset.limit;
   NEWS.init(limit ? parseInt(limit, 10) : 0);
   GALLERY.init();
-  TEACHING.init();
 });
 
 window.NEWS = NEWS;
 window.GALLERY = GALLERY;
-window.TEACHING = TEACHING;

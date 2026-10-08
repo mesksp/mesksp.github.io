@@ -32,7 +32,6 @@ research-portfolio/
 ├── research.html       Three research themes (anchored sections)
 ├── projects.html       Project cards (rendered from data/projects.json)
 ├── publications.html   Searchable/filterable publications + stats
-├── teaching.html       Assistantships and prior instruction
 ├── experience.html     Research / academic / industrial timeline + education
 ├── gallery.html        Filterable image gallery (placeholders)
 ├── news.html           Full news feed
@@ -50,14 +49,13 @@ research-portfolio/
 │   ├── publications.js  Renders publications + citations/BibTeX from JSON
 │   ├── search.js        Publication text search + type/status filters
 │   ├── projects.js      Renders project cards + theme filters from JSON
-│   └── content.js       Renders News, Gallery, Teaching from JSON
+│   └── content.js       Renders News and Gallery from JSON
 │
 ├── data/
 │   ├── publications.json
 │   ├── projects.json
 │   ├── news.json
-│   ├── gallery.json
-│   └── teaching.json
+│   └── gallery.json
 │
 ├── assets/
 │   ├── images/          Profile photo + gallery images (see placeholders)
@@ -73,7 +71,7 @@ research-portfolio/
 > spec, two were added to keep the code modular and the content fully
 > data-driven: **`components.js`** (single source of truth for the header,
 > footer, nav, social links and contact details) and **`content.js`** (the
-> News/Gallery/Teaching renderers). Editing `components.js` once updates the
+> News/Gallery renderers). Editing `components.js` once updates the
 > chrome on every page.
 
 ---
@@ -126,13 +124,12 @@ keys below), `overview`, `problem`, `motivation`, `methodology`,
 **Theme keys** (used by the project filter and the research page):
 `single-arm`, `dual-arm-planning`, `rl` (also used by `data/publications.json`).
 
-### Add news / gallery / teaching
+### Add news / gallery
 
 - `data/news.json` — newest first: `{ "date", "tag", "title", "body" }`.
 - `data/gallery.json` — `{ "category", "caption" }` (categories: `conference`,
   `lab`, `robot`, `simulation`, `demo`). Add an `image` field once you upload a
   file to `assets/images/`.
-- `data/teaching.json` — `assistantships[]` and `prior_instruction[]`.
 
 ### Update name, links, navigation
 

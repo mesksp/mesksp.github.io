@@ -35,7 +35,6 @@ const SITE = {
     { label: "Research",     href: "research.html" },
     { label: "Projects",     href: "projects.html" },
     { label: "Publications", href: "publications.html" },
-    { label: "Teaching",     href: "teaching.html" },
     { label: "Experience",   href: "experience.html" },
     { label: "Gallery",      href: "gallery.html" },
     { label: "News",         href: "news.html" },
