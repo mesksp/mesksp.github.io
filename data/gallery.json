@@ -1,0 +1,13 @@
+{
+  "_comment": "Gallery items. Each currently uses a placeholder; set 'image' to a file under assets/images/ to replace. Categories: conference | lab | robot | simulation | demo. Captions reference real CV events; replace with photo-specific captions when images are added.",
+  "items": [
+    { "category": "conference", "image": "", "caption": "IEEE CASE 2024 — Bari, Italy (PLACEHOLDER: add conference photo)" },
+    { "category": "conference", "image": "", "caption": "ICCMA 2024 — London, United Kingdom (PLACEHOLDER: add conference photo)" },
+    { "category": "conference", "image": "", "caption": "ICCAS 2025 — Incheon, Republic of Korea (PLACEHOLDER: add conference photo)" },
+    { "category": "robot",      "image": "", "caption": "Dual-arm Kinova Gen3 Lite workcell (PLACEHOLDER: add hardware photo)" },
+    { "category": "lab",        "image": "", "caption": "CAIR robotics laboratory, IIT Mandi (PLACEHOLDER: add lab photo)" },
+    { "category": "simulation", "image": "", "caption": "Isaac Lab training environment — differential IK policy (PLACEHOLDER: add screenshot)" },
+    { "category": "simulation", "image": "", "caption": "Isaac Sim dual-arm coordination scene (PLACEHOLDER: add screenshot)" },
+    { "category": "demo",       "image": "", "caption": "Collision-aware object sorting demonstration (PLACEHOLDER: add image/frame)" }
+  ]
+}

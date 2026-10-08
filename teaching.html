@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching — Surya Prakash S. K. | IIT Mandi</title>
+  <meta name="description" content="Graduate teaching assistantships and prior instruction by Surya Prakash S. K. in robot kinematics and dynamics, autonomy, and ROS-based control.">
+  <meta name="author" content="Surya Prakash S. K.">
+  <meta name="keywords" content="Robotics, Robot Learning, Reinforcement Learning, Dual-Arm Manipulation, Motion Planning, Computer Vision, Embodied AI, Isaac Sim, Isaac Lab, IIT Mandi, CAIR">
+  <link rel="canonical" href="https://suryaroboticarm.github.io/teaching.html">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Teaching — Surya Prakash S. K.">
+  <meta property="og:description" content="Teaching assistantships and instruction.">
+  <meta property="og:url" content="https://suryaroboticarm.github.io/teaching.html">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Theme guard: apply saved/system theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp_theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Schema.org Person metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Surya Prakash S. K.",
+    "jobTitle": "PhD Research Scholar",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Mandi"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Centre for Artificial Intelligence and Robotics (CAIR), IIT Mandi"
+    },
+    "email": "mailto:s.surya1754@gmail.com",
+    "url": "https://suryaroboticarm.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/surya-prakash-s-k-7517b2157/"],
+    "knowsAbout": ["Robotics", "Robot Learning", "Reinforcement Learning", "Motion Planning", "Computer Vision", "Vision-Based Manipulation", "Dual-Arm Manipulation", "Embodied AI", "Robot Control"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header injected by components.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ================= PAGE INTRO ================= -->
+    <section class="page-intro">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Teaching</nav>
+        <span class="eyebrow">Teaching</span>
+        <h1>Teaching</h1>
+        <p>Graduate teaching assistantships at IIT Mandi and prior undergraduate instruction, spanning robot kinematics and dynamics, autonomy, and ROS-based programming and control.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">IIT Mandi</span>
+          <h2>Graduate teaching assistantships</h2>
+          <p>As a Teaching Assistant since February 2022, I support graduate instruction and laboratories in core robotics subjects.</p>
+        </div>
+        <!-- Injected from data/teaching.json (assistantships) -->
+        <div class="grid grid-3" id="ta-list"><div class="loading">Loading…</div></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Laboratories &amp; mentoring</span>
+          <h2>Laboratories, mentoring &amp; outreach</h2>
+        </div>
+        <div class="prose reveal">
+          <p>My assistantships are laboratory-intensive. In the ROS programming and control course I lead hands-on sessions covering node design, inter-process communication, and closed-loop robot control; in robot kinematics and dynamics I run tutorials on forward and inverse kinematics, Jacobians, and manipulator dynamics; and in robot autonomy I support perception, planning, and decision-making exercises. During my earlier appointment as an Assistant Professor at GVPCE, I supervised undergraduate final-year projects and mentored students through their capstone work.</p>
+          <p class="muted" style="font-size: var(--fs-sm);">Placeholder: dedicated workshops, tutorials, and invited instruction will be listed here as such activities are recorded. The entries above reflect the teaching and mentoring documented in the CV.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Prior instruction</span>
+          <h2>Prior teaching</h2>
+        </div>
+        <!-- Injected from data/teaching.json (prior_instruction) -->
+        <div class="grid grid-3" id="prior-list"><div class="loading">Loading…</div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer injected by components.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts (order matters: config → theme → renderers → bootstrap) -->
+  <script src="js/components.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

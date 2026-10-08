@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Surya Prakash S. K. | Robotics &amp; AI, IIT Mandi</title>
+  <meta name="description" content="Conference, laboratory, robot, simulation, and demonstration images from the research of Surya Prakash S. K.">
+  <meta name="author" content="Surya Prakash S. K.">
+  <meta name="keywords" content="Robotics, Robot Learning, Reinforcement Learning, Dual-Arm Manipulation, Motion Planning, Computer Vision, Embodied AI, Isaac Sim, Isaac Lab, IIT Mandi, CAIR">
+  <link rel="canonical" href="https://suryaroboticarm.github.io/gallery.html">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Gallery — Surya Prakash S. K.">
+  <meta property="og:description" content="Conference, lab, robot, and simulation images.">
+  <meta property="og:url" content="https://suryaroboticarm.github.io/gallery.html">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Theme guard: apply saved/system theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp_theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Schema.org Person metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Surya Prakash S. K.",
+    "jobTitle": "PhD Research Scholar",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Mandi"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Centre for Artificial Intelligence and Robotics (CAIR), IIT Mandi"
+    },
+    "email": "mailto:s.surya1754@gmail.com",
+    "url": "https://suryaroboticarm.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/surya-prakash-s-k-7517b2157/"],
+    "knowsAbout": ["Robotics", "Robot Learning", "Reinforcement Learning", "Motion Planning", "Computer Vision", "Vision-Based Manipulation", "Dual-Arm Manipulation", "Embodied AI", "Robot Control"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header injected by components.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ================= PAGE INTRO ================= -->
+    <section class="page-intro">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Gallery</nav>
+        <span class="eyebrow">Gallery</span>
+        <h1>Gallery</h1>
+        <p>Conference participation, laboratory work, robot platforms, simulation environments, and research demonstrations. Images are placeholders pending upload.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Category filters (wired by content.js) -->
+        <div class="filter-group reveal" id="gallery-filters" role="group" aria-label="Filter gallery" style="margin-bottom: var(--sp-6);">
+          <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="conference" type="button">Conference</button>
+          <button class="filter-btn" data-filter="lab" type="button">Lab</button>
+          <button class="filter-btn" data-filter="robot" type="button">Robot</button>
+          <button class="filter-btn" data-filter="simulation" type="button">Simulation</button>
+          <button class="filter-btn" data-filter="demo" type="button">Demonstrations</button>
+        </div>
+
+        <!-- Gallery items injected here from data/gallery.json -->
+        <div class="gallery-grid" id="gallery-grid"><div class="loading">Loading gallery…</div></div>
+
+        <p class="muted" style="margin-top: var(--sp-6); font-size: var(--fs-sm);">Placeholder: all items are captioned placeholders. Replace them by adding image files to <code>assets/images/</code> and updating <code>data/gallery.json</code>.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer injected by components.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts (order matters: config → theme → renderers → bootstrap) -->
+  <script src="js/components.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Surya Prakash S. K. | Robotics &amp; AI, IIT Mandi</title>
+  <meta name="description" content="Research projects of Surya Prakash S. K. in dual-arm manipulation, vision-based control, motion planning, and reinforcement learning.">
+  <meta name="author" content="Surya Prakash S. K.">
+  <meta name="keywords" content="Robotics, Robot Learning, Reinforcement Learning, Dual-Arm Manipulation, Motion Planning, Computer Vision, Embodied AI, Isaac Sim, Isaac Lab, IIT Mandi, CAIR">
+  <link rel="canonical" href="https://suryaroboticarm.github.io/projects.html">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Projects — Surya Prakash S. K.">
+  <meta property="og:description" content="Detailed robotics research projects.">
+  <meta property="og:url" content="https://suryaroboticarm.github.io/projects.html">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Theme guard: apply saved/system theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp_theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Schema.org Person metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Surya Prakash S. K.",
+    "jobTitle": "PhD Research Scholar",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Mandi"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Centre for Artificial Intelligence and Robotics (CAIR), IIT Mandi"
+    },
+    "email": "mailto:s.surya1754@gmail.com",
+    "url": "https://suryaroboticarm.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/surya-prakash-s-k-7517b2157/"],
+    "knowsAbout": ["Robotics", "Robot Learning", "Reinforcement Learning", "Motion Planning", "Computer Vision", "Vision-Based Manipulation", "Dual-Arm Manipulation", "Embodied AI", "Robot Control"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header injected by components.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ================= PAGE INTRO ================= -->
+    <section class="page-intro">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Projects</nav>
+        <span class="eyebrow">Projects</span>
+        <h1>Projects</h1>
+        <p>Selected research projects, each presented with its problem, motivation, methodology, technical details, results, and future scope. Filter by research theme below.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Theme filters (wired by projects.js) -->
+        <div class="filter-group reveal" id="project-filters" role="group" aria-label="Filter projects by theme" style="margin-bottom: var(--sp-6);">
+          <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="vision" type="button">Vision-Based Manipulation</button>
+          <button class="filter-btn" data-filter="dual-arm" type="button">Dual-Arm</button>
+          <button class="filter-btn" data-filter="robot-learning" type="button">Robot Learning</button>
+          <button class="filter-btn" data-filter="reinforcement-learning" type="button">Reinforcement Learning</button>
+          <button class="filter-btn" data-filter="motion-planning" type="button">Motion Planning</button>
+          <button class="filter-btn" data-filter="industrial" type="button">Industrial Robotics</button>
+        </div>
+
+        <!-- Project cards injected here from data/projects.json -->
+        <div id="project-list" aria-live="polite">
+          <div class="loading">Loading projects…</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer injected by components.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts (order matters: config → theme → renderers → bootstrap) -->
+  <script src="js/components.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

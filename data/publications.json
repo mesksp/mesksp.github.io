@@ -1,0 +1,442 @@
+{
+  "_comment": "Single source of truth for all publications. To add a paper, append an object to the array below — no HTML edits required. 'me' marks the author entry to bold. Allowed type: journal | conference. Allowed status: published | accepted | under-review. Placeholders are marked PLACEHOLDER.",
+  "publications": [
+    {
+      "id": "iros2026-difik",
+      "type": "conference",
+      "status": "under-review",
+      "title": "Continuous Trajectory Tracking for Non-Spherical Wrist Manipulator via Coupled-Reward-Driven Differential Inverse Kinematics",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "S. T. Majji"
+        },
+        {
+          "name": "D. Prajapati"
+        },
+        {
+          "name": "J. P. Sahoo"
+        },
+        {
+          "name": "P. Kumar"
+        },
+        {
+          "name": "J. V. K."
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "publisher": "IEEE",
+      "location": "",
+      "year": 2026,
+      "pages": "",
+      "doi": "",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "abstract": "Continuous trajectory tracking requires differential inverse kinematics (IK) at every control timestep; for non-spherical wrist manipulators, kinematic coupling renders this a nonlinear problem. Numerical solvers that resolve waypoints independently can produce joint-space discontinuities. We address this through a coupled reward function, combining a min-operator inverse-quadratic pose reward, asymmetric progress shaping, and an exponential joint velocity penalty, that enforces simultaneous position-orientation convergence while suppressing velocity discontinuities, applied to a Proximal Policy Optimization (PPO) controller mapping a 19-dimensional observation directly to joint velocity commands. The policy is trained in Isaac Lab on 1.5 M joint-limit-aware reachable workspace poses, with no trajectory supervision. The method achieves competitive position and orientation accuracy in simulation against baselines spanning a numerical IK solver, classical velocity-level controllers, and contemporary RL methods. Zero-shot sim-to-real transfer to the Kinova Gen3 Lite at 20 Hz closed-loop frequency achieves a position RMSE of 6.3 mm and orientation RMSE of 0.032 rad on circular trajectory tracking, and the policy generalizes without retraining to square, lemniscate, and 3-D Lissajous trajectories.",
+      "keywords": [
+        "Reinforcement Learning",
+        "Differential Inverse Kinematics",
+        "PPO",
+        "Sim-to-Real",
+        "Isaac Lab",
+        "Trajectory Tracking"
+      ],
+      "links": {
+        "pdf": "",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video 1",
+            "src": "assets/videos/7.mp4"
+          },
+          {
+            "label": "Video 2",
+            "src": "assets/videos/7_1.mp4"
+          },
+          {
+            "label": "Video 3",
+            "src": "assets/videos/7_2.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tase2025-cta",
+      "type": "journal",
+      "status": "under-review",
+      "title": "Competitive Task Allocation with Temporal Proposal Windows and Improved Artificial Potential Fields for Dual-Arm Industrial Manipulation",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "B. Narula"
+        },
+        {
+          "name": "D. Prajapati"
+        },
+        {
+          "name": "J. P. Sahoo"
+        },
+        {
+          "name": "J. V. K."
+        },
+        {
+          "name": "P. Hambarde"
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "IEEE Transactions on Automation Science and Engineering (T-ASE)",
+      "publisher": "IEEE",
+      "location": "",
+      "year": 2025,
+      "pages": "",
+      "doi": "",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "note": "Revision 1 under review",
+      "abstract": "Modern industrial automation demands autonomous collaborative systems capable of coordinated manipulation in workspaces with heterogeneous object arrangements. This paper presents a distance-based competitive task allocation framework for dual-arm systems, integrating real-time vision perception with collision-free motion planning. A temporal window mechanism enables each arm to evaluate object detections over five consecutive vision frames before committing to optimal distance-based selection, featuring dynamic reallocation and spatial conflict resolution at 0.01 m threshold accuracy. An improved Artificial Potential Field (iAPF) framework provides coordinated dual-arm movements through exponential goal attraction, inter-arm repulsion, home-seeking, and velocity damping forces. Simulation results validate superiority over market-based, round-robin, and fixed allocation strategies in distance efficiency, collision risk, and workspace coverage. Hardware experiments using two 6-DOF Kinova Gen3 Lite manipulators demonstrate approximately 47% average velocity improvement over fixed allocation in homogeneous scenarios with zero collisions, while mixed object scenarios confirm universal handling with approximately 11% time overhead offset by superior safety margins. The framework integrates YOLOv8 OBB detection at 30 FPS with 10 Hz control loops.",
+      "keywords": [
+        "Intelligent Robots",
+        "Competitive Task Allocation",
+        "Industrial Automation",
+        "Motion Planning",
+        "Artificial Potential Fields"
+      ],
+      "links": {
+        "pdf": "",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video",
+            "src": "assets/videos/6.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "frobt2025-iapf",
+      "type": "journal",
+      "status": "published",
+      "title": "iAPF: An Improved Artificial Potential Field Framework for Asymmetric Dual-Arm Manipulation with Real-Time Inter-Arm Collision Avoidance",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "D. Prajapati"
+        },
+        {
+          "name": "B. Narula"
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "Frontiers in Robotics and AI",
+      "publisher": "Frontiers",
+      "location": "",
+      "year": 2025,
+      "pages": "12:1604506",
+      "doi": "10.3389/frobt.2025.1604506",
+      "flags": {
+        "first": true,
+        "corresponding": true,
+        "best": false
+      },
+      "abstract": "This work introduces iAPF, an improved Artificial Potential Field framework for asymmetric dual-arm manipulation. A line-segment-based distance matrix enables precise, real-time proximity monitoring between links, while refined attractive and repulsive potentials maintain smooth, collision-free motion during cooperative tasks. The framework is validated on a dual-arm system performing collision-aware object sorting.",
+      "keywords": [
+        "Artificial Potential Field",
+        "Dual-Arm Manipulation",
+        "Collision Avoidance",
+        "Motion Planning"
+      ],
+      "links": {
+        "pdf": "assets/papers/5.pdf",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video",
+            "src": "assets/videos/5.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "iccas2025-distance",
+      "type": "conference",
+      "status": "published",
+      "title": "Kinematics-Based Real-Time Distance Monitoring for Safe Multi-Arm Robot Operations",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "D. K. Prajapati"
+        },
+        {
+          "name": "B. Narula"
+        },
+        {
+          "name": "J. Sahoo"
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "25th International Conference on Control, Automation and Systems (ICCAS)",
+      "publisher": "IEEE",
+      "location": "Incheon, Republic of Korea",
+      "year": 2025,
+      "pages": "pp. 1491–1497",
+      "doi": "",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "abstract": "Collaborative manipulations in industrial setups such as assembly lines and warehouse management are essential for advanced automation. This paper presents a mathematically robust, kinematics-based method for real-time distance calculation between manipulator links without requiring external sensors. We first derive a geometric framework for multi-arm systems that classifies link configurations as parallel, intersecting, or skew, enabling precise minimum distance calculations through line segment representation. The general n-arm framework is then specialized for dual-arm systems, focusing on collision-critical segments in table-mounted configurations. Real-time hardware validation on dual Kinova Gen3 Lite manipulators demonstrates the method's effectiveness for computing inter-arm distances in shared workspace operations.",
+      "keywords": [
+        "Multi-Arm Robots",
+        "Distance Monitoring",
+        "Robot Safety",
+        "Kinematics"
+      ],
+      "links": {
+        "pdf": "assets/papers/4.pdf",
+        "code": "",
+        "videos": []
+      }
+    },
+    {
+      "id": "case2024-bolt",
+      "type": "conference",
+      "status": "published",
+      "title": "Automated Vision-Based Bolt Sorting by Manipulator for Industrial Applications",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "A. Shukla"
+        },
+        {
+          "name": "N. Pandya"
+        },
+        {
+          "name": "S. S. Jha"
+        }
+      ],
+      "venue": "IEEE 20th International Conference on Automation Science and Engineering (CASE)",
+      "publisher": "IEEE",
+      "location": "Bari, Italy",
+      "year": 2024,
+      "pages": "pp. 3602–3607",
+      "doi": "10.1109/CASE59546.2024.10711806",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "abstract": "This paper presents an automated vision-based pipeline for sorting bolts with a robotic manipulator in industrial settings. Visual detection and pose estimation drive grasp selection and placement, demonstrating a practical perception-to-manipulation workflow for repetitive industrial sorting tasks.",
+      "keywords": [
+        "Computer Vision",
+        "Industrial Robotics",
+        "Manipulation",
+        "Object Sorting"
+      ],
+      "links": {
+        "pdf": "assets/papers/2.pdf",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video",
+            "src": "assets/videos/2.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "iccma2024-bolt",
+      "type": "conference",
+      "status": "published",
+      "title": "Automated Vision-Based Bolt Handling for Industrial Applications Using a Manipulator",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "12th International Conference on Control, Mechatronics and Automation (ICCMA)",
+      "publisher": "IEEE",
+      "location": "London, United Kingdom",
+      "year": 2024,
+      "pages": "pp. 193–198",
+      "doi": "10.1109/ICCMA63715.2024.10843915",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "abstract": "We extend automated bolt manipulation to handling and placement using a vision-guided manipulator. The system integrates detection, localisation and motion execution to perform reliable pick-and-place of bolts for industrial automation scenarios.",
+      "keywords": [
+        "Computer Vision",
+        "Industrial Robotics",
+        "Pick-and-Place",
+        "Manipulation"
+      ],
+      "links": {
+        "pdf": "assets/papers/1.pdf",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video 1",
+            "src": "assets/videos/1.mp4"
+          },
+          {
+            "label": "Video 2",
+            "src": "assets/videos/1_1.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shared-vision",
+      "type": "conference",
+      "status": "under-review",
+      "title": "Dual-Arm Cooperative Manipulation Through Shared Vision",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "A. Gupta"
+        },
+        {
+          "name": "S. S. K."
+        },
+        {
+          "name": "A. D."
+        },
+        {
+          "name": "K. T."
+        },
+        {
+          "name": "S. T. M."
+        },
+        {
+          "name": "J. P. Sahoo"
+        },
+        {
+          "name": "S. Datta"
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "",
+      "publisher": "",
+      "location": "",
+      "year": 2026,
+      "pages": "",
+      "doi": "",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "abstract": "This work presents a dual-arm manipulation system using two Kinova Gen3 Lite (6-DOF) manipulators, each with a wrist-mounted eye-in-hand camera, for coordinated target search and pick-and-place in a shared workspace. Each arm independently executes a joint-space search trajectory while running continuous fiducial (ArUco) detection on its own camera. Upon detection by either arm, the target pose is computed in the detecting arm's own base frame and relayed into the other arm's base frame through a fixed, measured inter-arm transform. A reachability-based rule then selects the acting arm, and the selected arm executes the pick-and-place sequence under damped least-squares resolved-rate control. The pipeline is validated in both Gazebo/ROS2 simulation and on physical dual-arm hardware, giving a reproducible, classical-vision coordination protocol that uses no learned perception or control components.",
+      "keywords": [
+        "Dual-Arm Manipulation",
+        "Collaborative Manipulation",
+        "Shared Vision",
+        "Resolved-Rate Control"
+      ],
+      "links": {
+        "pdf": "",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video 1",
+            "src": "assets/videos/3.mp4"
+          },
+          {
+            "label": "Video 2",
+            "src": "assets/videos/3_1.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "gpc-prior-guided",
+      "type": "journal",
+      "status": "under-review",
+      "title": "Prior-Guided Policy Learning for Cooperative Dual-Arm Pre-Assembly Alignment",
+      "authors": [
+        {
+          "name": "Surya Prakash S. K.",
+          "me": true
+        },
+        {
+          "name": "S. T. M."
+        },
+        {
+          "name": "P. Hambarde"
+        },
+        {
+          "name": "A. Shukla"
+        }
+      ],
+      "venue": "",
+      "publisher": "",
+      "location": "",
+      "year": 2026,
+      "pages": "",
+      "doi": "",
+      "flags": {
+        "first": true,
+        "corresponding": false,
+        "best": false
+      },
+      "abstract": "Cooperative dual-arm pre-assembly alignment requires two manipulators to acquire independent targets and then converge on a shared co-axial configuration. This paper presents Gated Prior Composition (GPC), a hierarchical framework trained in two stages: a single-arm reaching policy is first trained under PPO to produce a joint velocity-level differential inverse kinematics mapping and is then frozen, and a coordination policy is subsequently trained against it by Multi-Agent PPO (MAPPO) under Centralized Training with Decentralized Execution. The two policy outputs are combined at every control step through a per-arm gating scalar, so that reliance on the prior is regulated by task phase rather than fixed in advance. Across 4,096 parallel simulation environments the framework attains 95.9% reach and 93.9% alignment success, averaged over three training seeds. Direct sim-to-real transfer to two Kinova Gen3 Lite manipulators yields 93.3% reach and 90.0% alignment over 30 hardware trials, with 200 Hz policy inference on a CPU-only platform against a 20 Hz control loop.",
+      "keywords": [
+        "Robot Learning",
+        "Dual-Arm Manipulation",
+        "Residual Policy Learning",
+        "Sim-to-Real Transfer"
+      ],
+      "links": {
+        "pdf": "",
+        "code": "",
+        "videos": [
+          {
+            "label": "Video",
+            "src": "assets/videos/8.mp4"
+          }
+        ]
+      }
+    }
+  ]
+}

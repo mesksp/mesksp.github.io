@@ -1,0 +1,8 @@
+Display Name : Surya Prakash S.K
+E-mail: s.surya1754@gmail.com/suryamechanical.nitjsr@gmail.com
+Photo: added in the images directory at: /home/yesho/research-portfolio/assets/images
+short tagline : Robotics and control Research scholar, motion planning for dual-arm collaborative manipulators, learning based robot trajectory tracking, multi-agent reinforcement learning based collaborative alignment with dual-arm manipulator for pre-assembly of industrial components.
+
+Google scholar id : https://scholar.google.com/citations?user=NJhUjFQAAAAJ&hl=en
+ORCID: https://orcid.org/0009-0006-3327-8019
+Linkedin: https://www.linkedin.com/in/surya-prakash-s-k-7517b2157/

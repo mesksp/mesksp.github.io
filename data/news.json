@@ -1,0 +1,41 @@
+{
+  "_comment": "Reverse-chronological research news. Every entry corresponds to a real event recorded in the CV (publications, conference venues, review milestones). Add new items at the top. 'tag' categorises the update.",
+  "news": [
+    {
+      "date": "2026",
+      "tag": "Under Review",
+      "title": "Paper under review at IROS 2026",
+      "body": "Our work on continuous trajectory tracking for non-spherical wrist manipulators via learned differential inverse kinematics is under review for IEEE/RSJ IROS 2026."
+    },
+    {
+      "date": "2025",
+      "tag": "Under Review",
+      "title": "Journal submission under review at IEEE T-ASE",
+      "body": "Competitive task allocation with real-time collision avoidance for autonomous dual-arm manipulation is in revision (R1) at IEEE Transactions on Automation Science and Engineering."
+    },
+    {
+      "date": "2025",
+      "tag": "Publication",
+      "title": "iAPF published in Frontiers in Robotics and AI",
+      "body": "Our improved Artificial Potential Field framework for asymmetric dual-arm manipulation with real-time inter-arm collision avoidance appeared in Frontiers in Robotics and AI (doi:10.3389/frobt.2025.1604506)."
+    },
+    {
+      "date": "2025",
+      "tag": "Conference",
+      "title": "Presented at ICCAS 2025, Incheon",
+      "body": "Presented kinematics-based real-time distance monitoring for safe multi-arm robot operations at the 25th International Conference on Control, Automation and Systems in Incheon, Republic of Korea."
+    },
+    {
+      "date": "2024",
+      "tag": "Conference",
+      "title": "Presented at IEEE CASE 2024, Bari",
+      "body": "Presented automated vision-based bolt sorting by a manipulator for industrial applications at the IEEE 20th International Conference on Automation Science and Engineering in Bari, Italy."
+    },
+    {
+      "date": "2024",
+      "tag": "Conference",
+      "title": "Presented at ICCMA 2024, London",
+      "body": "Presented automated vision-based bolt handling for industrial applications at the 12th International Conference on Control, Mechatronics and Automation in London, United Kingdom."
+    }
+  ]
+}

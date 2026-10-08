@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://suryaroboticarm.github.io/sitemap.xml

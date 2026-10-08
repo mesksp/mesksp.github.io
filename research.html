@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Surya Prakash S. K. | Robotics &amp; AI, IIT Mandi</title>
+  <meta name="description" content="Research themes of Surya Prakash S. K.: vision-based manipulation, dual-arm manipulation, robot learning, reinforcement learning, motion planning, embodied AI, and industrial robotics.">
+  <meta name="author" content="Surya Prakash S. K.">
+  <meta name="keywords" content="Robotics, Robot Learning, Reinforcement Learning, Dual-Arm Manipulation, Motion Planning, Computer Vision, Embodied AI, Isaac Sim, Isaac Lab, IIT Mandi, CAIR">
+  <link rel="canonical" href="https://suryaroboticarm.github.io/research.html">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Research — Surya Prakash S. K.">
+  <meta property="og:description" content="Seven research themes in robotics and AI.">
+  <meta property="og:url" content="https://suryaroboticarm.github.io/research.html">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Theme guard: apply saved/system theme before first paint -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp_theme');
+        if (t !== 'light' && t !== 'dark') {
+          t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Schema.org Person metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Surya Prakash S. K.",
+    "jobTitle": "PhD Research Scholar",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Indian Institute of Technology Mandi"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Centre for Artificial Intelligence and Robotics (CAIR), IIT Mandi"
+    },
+    "email": "mailto:s.surya1754@gmail.com",
+    "url": "https://suryaroboticarm.github.io/",
+    "sameAs": ["https://www.linkedin.com/in/surya-prakash-s-k-7517b2157/"],
+    "knowsAbout": ["Robotics", "Robot Learning", "Reinforcement Learning", "Motion Planning", "Computer Vision", "Vision-Based Manipulation", "Dual-Arm Manipulation", "Embodied AI", "Robot Control"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Header injected by components.js -->
+  <div id="site-header"></div>
+
+  <main id="main">
+    <!-- ================= PAGE INTRO ================= -->
+    <section class="page-intro">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Research</nav>
+        <span class="eyebrow">Research</span>
+        <h1>Research</h1>
+        <p>My research is organised around seven connected themes, from vision-based manipulation to embodied AI. Each unites perception, planning, learning, and control toward dexterous, deployable robots.</p>
+      </div>
+    </section>
+
+    <section class="section--tight">
+      <div class="container">
+        <div class="reveal" style="display:flex;flex-wrap:wrap;gap:var(--sp-2);">
+          <a class="tag tag--navy" href="#theme-vision">01 · Vision-Based Manipulation</a>
+          <a class="tag tag--navy" href="#theme-dual-arm">02 · Dual-Arm Manipulation</a>
+          <a class="tag tag--navy" href="#theme-learning">03 · Robot Learning</a>
+          <a class="tag tag--navy" href="#theme-rl">04 · Reinforcement Learning</a>
+          <a class="tag tag--navy" href="#theme-planning">05 · Motion Planning</a>
+          <a class="tag tag--navy" href="#theme-embodied">06 · Embodied AI</a>
+          <a class="tag tag--navy" href="#theme-industrial">07 · Industrial Robotics</a>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 1: Vision-Based Robotic Manipulation ===== -->
+    <section class="section" id="theme-vision">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 01</span>
+          <h2>Vision-Based Robotic Manipulation</h2>
+          <p>Reliable manipulation begins with reliable perception. This theme builds real-time pipelines that turn RGB-D observations into the object poses, geometry, and scene understanding a manipulator needs to grasp, place, and sort with precision. My work has applied vision-based perception to industrial tasks such as automated bolt sorting and handling, and to pose estimation that feeds directly into collision-aware planning for cooperating arms.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Estimating accurate object pose and orientation from RGB-D data fast enough for closed-loop control.</li><li>Maintaining robustness under clutter, occlusion, and varying lighting on real hardware.</li><li>Coupling perception tightly with planning and control so that vision drives action at interactive rates.</li></ul>
+          <h3>Current work</h3>
+          <p>I use oriented-bounding-box detection (YOLOv8-OBB) running at around 30 FPS to estimate object pose, and feed these estimates into a real-time control loop for dual-arm sorting and handling. Vision-derived pose also seeds the line-segment distance computations that keep cooperating arms clear of one another and of the workpieces they manipulate.</p>
+          <h3>Future directions</h3>
+          <p>I aim to broaden perception from known industrial parts toward more general object sets, integrate learned representations for contact-rich and deformable-object manipulation, and tighten the perception-to-control loop so that visual feedback corrects motion continuously rather than only at planning time.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">CASE 2024 — Automated vision-based bolt sorting</a></p><p><a class="link-arrow" href="publications.html">ICCMA 2024 — Automated vision-based bolt handling</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Competitive task allocation with real-time collision avoidance</a></p><p><a class="link-arrow" href="projects.html">Improved APF for dual-arm manipulation</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 2: Dual-Arm Manipulation ===== -->
+    <section class="section section--alt" id="theme-dual-arm">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 02</span>
+          <h2>Dual-Arm Manipulation</h2>
+          <p>Two arms can accomplish what one cannot, but coordination introduces hard problems in task allocation, timing, and collision avoidance. This theme develops planning and control for asymmetric and collaborative dual-arm systems that share a workspace safely and productively, demonstrated on dual Kinova Gen3 Lite manipulators.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Avoiding inter-arm and arm-object collisions in real time as both arms move through a shared workspace.</li><li>Allocating tasks between arms efficiently when goals compete for the same objects or regions.</li><li>Coordinating asymmetric arms whose reachable workspaces and dynamics differ.</li></ul>
+          <h3>Current work</h3>
+          <p>I developed an improved artificial-potential-field (iAPF) framework for asymmetric dual-arm manipulation that uses a line-segment distance matrix and exponential attraction with velocity damping for smooth, collision-aware motion. Building on this, a competitive task-allocation scheme with real-time collision avoidance runs a roughly 10 Hz control loop fed by 30 FPS vision, and a kinematics-based distance-monitoring method provides real-time safety margins for multi-arm operation.</p>
+          <h3>Future directions</h3>
+          <p>I plan to scale coordination beyond two arms, incorporate learning-based policies for cooperative tasks such as alignment and assembly, and develop coordination methods that carry formal or empirical safety guarantees from simulation onto hardware.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">Frontiers in Robotics and AI 2025 — iAPF framework</a></p><p><a class="link-arrow" href="publications.html">ICCAS 2025 — Real-time distance monitoring</a></p><p><a class="link-arrow" href="publications.html">IEEE T-ASE (under review) — Competitive task allocation</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Improved APF for dual-arm manipulation</a></p><p><a class="link-arrow" href="projects.html">Adaptive policy blending for dual-arm alignment</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 3: Robot Learning ===== -->
+    <section class="section" id="theme-learning">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 03</span>
+          <h2>Robot Learning</h2>
+          <p>Hand-engineered controllers struggle to scale across the variety of poses, tasks, and contacts that real manipulation presents. This theme trains policies — at scale in simulation — that capture manipulation skills directly and transfer them to hardware, reducing the reliance on hand-tuned heuristics.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Learning controllers that generalise across large, continuous regions of the workspace.</li><li>Achieving zero-shot sim-to-real transfer without per-task retuning.</li><li>Designing observation and action representations that make learning efficient and stable.</li></ul>
+          <h3>Current work</h3>
+          <p>I trained a learned differential inverse-kinematics policy with PPO in Isaac Lab over roughly 1.5 million reachable poses, mapping a 25-dimensional pose-error representation to joint velocities for continuous trajectory tracking on a non-spherical-wrist manipulator. The policy transfers zero-shot to a real Kinova Gen3 Lite operating at 20 Hz, demonstrating that large-scale simulated training can yield controllers that work directly on hardware.</p>
+          <h3>Future directions</h3>
+          <p>I want to extend learned controllers from single skills toward repertoires of manipulation behaviours, study how learned and model-based components should be composed, and improve the data efficiency and reliability of transfer so that learning scales to richer, contact-heavy tasks.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">IROS 2026 (under review) — Learned differential IK</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Continuous trajectory tracking via learned differential IK</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 4: Reinforcement Learning ===== -->
+    <section class="section section--alt" id="theme-rl">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 04</span>
+          <h2>Reinforcement Learning</h2>
+          <p>Reinforcement learning lets robots discover control strategies that are difficult to specify by hand. This theme applies single- and multi-agent RL to manipulation, with attention to stable training, sensible reward and observation design, and policies that remain reliable when deployed.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Designing rewards and observations that yield stable, sample-efficient training.</li><li>Coordinating multiple learning agents (multi-arm) without destabilising one another.</li><li>Retaining the benefits of model-based structure while adding learned adaptability.</li></ul>
+          <h3>Current work</h3>
+          <p>Beyond the PPO-based differential-IK controller, I am developing adaptive policy blending in multi-agent reinforcement learning for cooperative dual-arm alignment. The approach is hierarchical and residual: a pretrained PPO base policy is combined with a MAPPO residual under centralised training with decentralised execution (CTDE), with a learned blending coefficient governing their combination, a 92-dimensional global critic, and 47-dimensional local observations.</p>
+          <h3>Future directions</h3>
+          <p>I intend to deepen the integration of RL with classical control, pursue residual and hierarchical schemes that preserve safety and interpretability, and broaden multi-agent coordination to larger teams of arms and robots.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">IROS 2026 (under review) — Learned differential IK</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Adaptive policy blending in MARL</a></p><p><a class="link-arrow" href="projects.html">Continuous trajectory tracking via learned differential IK</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 5: Motion Planning ===== -->
+    <section class="section" id="theme-planning">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 05</span>
+          <h2>Motion Planning</h2>
+          <p>Manipulators must move smoothly, efficiently, and safely through cluttered, shared workspaces. This theme develops kinematics-based motion planning for dual-arm manipulators, with collision avoidance and distance monitoring designed to run in real time.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Computing collision-free motion for multiple arms quickly enough for closed-loop use.</li><li>Representing distances between articulated bodies accurately yet cheaply.</li><li>Producing trajectories that are smooth and dynamically reasonable, not merely feasible.</li></ul>
+          <h3>Current work</h3>
+          <p>My improved APF framework plans collision-aware dual-arm motion using a line-segment distance matrix together with exponential attraction and velocity damping, and a complementary kinematics-based method monitors inter-arm distances in real time for safe multi-arm operation. These planners are paired with vision-based pose estimation so that planning responds to the actual scene.</p>
+          <h3>Future directions</h3>
+          <p>I plan to combine planning with learned policies for faster, more general motion generation, extend real-time planning to more than two arms, and strengthen the safety guarantees that planning provides during contact-rich and dynamic tasks.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">Frontiers in Robotics and AI 2025 — iAPF framework</a></p><p><a class="link-arrow" href="publications.html">ICCAS 2025 — Real-time distance monitoring</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Improved APF for dual-arm manipulation</a></p><p><a class="link-arrow" href="projects.html">Competitive task allocation with real-time collision avoidance</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 6: Embodied AI ===== -->
+    <section class="section section--alt" id="theme-embodied">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 06</span>
+          <h2>Embodied AI</h2>
+          <p>Embodied AI asks how perception, learning, and action come together in a physical agent acting in the real world. This theme frames my manipulation research within that broader goal: agents that sense their environment, decide, and act, with skills learned at scale in simulation and carried onto hardware.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Integrating perception, learning, and control into a single embodied loop rather than separate stages.</li><li>Transferring simulated competence to physical robots without degradation.</li><li>Building agents whose skills generalise across tasks and embodiments.</li></ul>
+          <h3>Current work</h3>
+          <p>My current contribution toward embodied agents is the large-scale training of manipulation policies in NVIDIA Isaac Sim and Isaac Lab and their zero-shot transfer to real manipulators — for example the differential-IK controller trained over roughly 1.5 million poses and deployed on a Kinova Gen3 Lite. This establishes a practical pathway from simulated experience to embodied real-world skill.</p>
+          <h3>Future directions</h3>
+          <p>I aim to move from individual transferred skills toward more general embodied manipulation: agents that combine perception and control for contact-rich tasks, adapt across platforms, and acquire broad repertoires of behaviour through learning in simulation.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">IROS 2026 (under review) — Learned differential IK</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Continuous trajectory tracking via learned differential IK</a></p><p><a class="link-arrow" href="projects.html">Adaptive policy blending in MARL</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== THEME 7: Industrial Robotics ===== -->
+    <section class="section" id="theme-industrial">
+      <div class="container">
+        <div class="prose reveal">
+          <span class="eyebrow">Theme 07</span>
+          <h2>Industrial Robotics</h2>
+          <p>Much of my research is motivated by real industrial needs — sorting, handling, safe multi-arm operation, and cooperative assembly. This theme keeps the work grounded in tasks that matter on the factory floor, where speed, reliability, and safety are non-negotiable.</p>
+          <h3>Research challenges</h3>
+          <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Meeting the throughput and real-time constraints of industrial tasks.</li><li>Guaranteeing safe operation when multiple arms share a workspace with parts and fixtures.</li><li>Bridging the gap between laboratory demonstrations and dependable deployment.</li></ul>
+          <h3>Current work</h3>
+          <p>I have applied vision-based manipulation to automated bolt sorting and handling, developed real-time collision avoidance and distance monitoring for safe multi-arm operation, and built competitive task allocation for two cooperating Kinova Gen3 Lite arms. These efforts target industrial manipulation problems directly and are demonstrated in both simulation and hardware.</p>
+          <h3>Future directions</h3>
+          <p>I plan to extend these methods toward flexible, reconfigurable manipulation cells, cooperative assembly with multiple arms, and learning-based controllers that adapt to new parts and tasks while preserving the safety and reliability industry requires.</p>
+          <div class="grid grid-2" style="margin-top: var(--sp-5);">
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
+              <p><a class="link-arrow" href="publications.html">CASE 2024 — Automated vision-based bolt sorting</a></p><p><a class="link-arrow" href="publications.html">ICCMA 2024 — Automated vision-based bolt handling</a></p><p><a class="link-arrow" href="publications.html">ICCAS 2025 — Real-time distance monitoring</a></p>
+            </div>
+            <div>
+              <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
+              <p><a class="link-arrow" href="projects.html">Competitive task allocation with real-time collision avoidance</a></p><p><a class="link-arrow" href="projects.html">Improved APF for dual-arm manipulation</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer injected by components.js -->
+  <div id="site-footer"></div>
+
+  <!-- Scripts (order matters: config → theme → renderers → bootstrap) -->
+  <script src="js/components.js"></script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

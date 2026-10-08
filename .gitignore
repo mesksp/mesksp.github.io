@@ -1,0 +1,16 @@
+# LaTeX sources, templates and peer-review correspondence (keep private)
+assets/papers/*/
+assets/papers/**/*.tex
+assets/papers/**/*.bib
+assets/papers/**/*.cls
+assets/papers/**/*.bst
+assets/papers/**/*.sty
+# Full-size original videos live outside the repo
+*.mov
+.DS_Store
+# Unpublished / under-review manuscripts: abstract-only on the site
+assets/papers/3.pdf
+assets/papers/6.pdf
+assets/papers/7.pdf
+assets/papers/8.pdf
+assets/images/Surya_Prakash S.K.png

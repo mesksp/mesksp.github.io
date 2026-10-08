@@ -1,0 +1,259 @@
+{
+ "_comment": "All projects derive from the CV. To add a project, append an object. Each links to a related publication id where applicable. Add image/code/video paths when available; empty strings render a placeholder or hide the action.",
+ "projects": [
+  {
+   "id": "difik",
+   "title": "Learned Differential Inverse Kinematics for Non-Spherical Wrist Manipulators",
+   "tagline": "Zero-shot sim-to-real trajectory tracking via reinforcement learning",
+   "themes": [
+    "robot-learning",
+    "reinforcement-learning"
+   ],
+   "year": "2025–2026",
+   "overview": "A reinforcement-learning controller that performs continuous, accurate end-effector trajectory tracking on manipulators whose wrist geometry breaks the assumptions behind closed-form inverse kinematics.",
+   "problem": "Non-spherical wrist manipulators exhibit kinematic coupling and joint-space discontinuities that make analytical inverse kinematics ill-conditioned, producing jerky or infeasible motion near singular configurations.",
+   "motivation": "Many low-cost collaborative arms used in research and industry do not satisfy the spherical-wrist condition, yet smooth trajectory tracking is a prerequisite for manipulation, assembly and tele-operation. A learned controller that generalises across the workspace removes the need for per-robot analytical derivations.",
+   "methodology": "A Proximal Policy Optimization (PPO) policy is trained in NVIDIA Isaac Lab over 1.5 million reachable poses. The policy maps a 25-dimensional pose-error vector directly to joint velocities, optimising a custom reward that balances tracking accuracy against energy efficiency.",
+   "technical": "Massively parallel simulation in Isaac Lab; 25-D observation of pose error; continuous joint-velocity action space; reward shaping for accuracy and effort; domain considerations enabling transfer.",
+   "results": "The policy achieves zero-shot sim-to-real transfer on a physical Kinova Gen3 Lite, tracking continuous trajectories at 20 Hz without any real-world fine-tuning.",
+   "future": "Extension to dynamic obstacle fields, payload variation, and dual-arm coordinated tracking; integration with task-level planners for full manipulation pipelines.",
+   "tech": [
+    "Reinforcement Learning",
+    "PPO",
+    "Isaac Lab",
+    "Isaac Sim",
+    "Python",
+    "Sim-to-Real"
+   ],
+   "publication": "iros2026-difik",
+   "links": {
+    "code": "",
+    "videos": [
+     {
+      "label": "Video 1",
+      "src": "assets/videos/7.mp4"
+     },
+     {
+      "label": "Video 2",
+      "src": "assets/videos/7_1.mp4"
+     },
+     {
+      "label": "Video 3",
+      "src": "assets/videos/7_2.mp4"
+     }
+    ]
+   },
+   "image": ""
+  },
+  {
+   "id": "competitive-task-allocation",
+   "title": "Competitive Task Allocation with Real-Time Collision Avoidance for Dual-Arm Manipulation",
+   "tagline": "Spatially and temporally aware coordination for cooperating arms",
+   "themes": [
+    "dual-arm",
+    "motion-planning",
+    "industrial"
+   ],
+   "year": "2024–2025",
+   "overview": "A proximity-based competitive task-allocation framework that lets two arms decide, in real time, which arm services which target while guaranteeing inter-arm safety.",
+   "problem": "When two manipulators share a workspace, naive scheduling produces idle time, contention and collision risk; hand-coded allocation rules do not generalise across object layouts.",
+   "motivation": "Industrial cells increasingly deploy multiple arms for throughput. A reactive, perception-driven allocation policy that is inherently collision-aware is more scalable than rigid, pre-computed schedules.",
+   "methodology": "A YOLOv8-OBB perception pipeline runs at 30 FPS and feeds a 10 Hz control loop. An improved Artificial Potential Field (iAPF) with exponential attraction and velocity damping resolves inter-arm collisions in real time, while a competitive rule assigns targets by proximity.",
+   "technical": "Dual Kinova Gen3 Lite arms; oriented-bounding-box detection (YOLOv8-OBB); 30 FPS vision, 10 Hz control; iAPF with exponential attractive potential and velocity damping for stability.",
+   "results": "Real-time, collision-aware cooperative manipulation with autonomous target assignment, validated on the dual-arm hardware.",
+   "future": "Learning the allocation policy end-to-end; scaling beyond two arms; tighter coupling between allocation and assembly-level objectives.",
+   "tech": [
+    "ROS",
+    "YOLOv8-OBB",
+    "OpenCV",
+    "Artificial Potential Field",
+    "Motion Planning",
+    "Deep Learning"
+   ],
+   "publication": "tase2025-cta",
+   "links": {
+    "code": "",
+    "videos": [
+     {
+      "label": "Video",
+      "src": "assets/videos/6.mp4"
+     }
+    ]
+   },
+   "image": ""
+  },
+  {
+   "id": "iapf-dual-arm",
+   "title": "Improved Artificial Potential Field for Dual-Arm Manipulation",
+   "tagline": "Real-time inter-arm collision avoidance for asymmetric arms",
+   "themes": [
+    "dual-arm",
+    "motion-planning",
+    "vision"
+   ],
+   "year": "2024–2025",
+   "overview": "An improved Artificial Potential Field (iAPF) method that delivers autonomous, collision-aware motion for asymmetric dual-arm manipulators during shared-workspace tasks.",
+   "problem": "Classical potential fields suffer from local minima and coarse proximity estimates, making them unreliable for close-proximity dual-arm coordination.",
+   "motivation": "Safe dual-arm operation requires accurate, continuous knowledge of how close the arms are at every instant, computed fast enough to drive reactive control.",
+   "methodology": "A line-segment-based distance matrix provides precise link-to-link proximity monitoring, integrated with vision-based pose estimation for target detection. Refined potentials produce smooth, collision-free trajectories.",
+   "technical": "Line-segment distance matrix for proximity; vision-based pose estimation; improved attractive/repulsive potentials; real-time object sorting demonstration.",
+   "results": "Demonstrated real-time, collision-aware object sorting on a dual-arm system; published in Frontiers in Robotics and AI.",
+   "future": "Coupling iAPF with learned policies; extension to cluttered, dynamic environments and higher arm counts.",
+   "tech": [
+    "ROS",
+    "OpenCV",
+    "Artificial Potential Field",
+    "Motion Planning",
+    "Deep Learning"
+   ],
+   "publication": "frobt2025-iapf",
+   "links": {
+    "code": "",
+    "videos": [
+     {
+      "label": "Video",
+      "src": "assets/videos/5.mp4"
+     }
+    ]
+   },
+   "image": ""
+  },
+  {
+   "id": "adaptive-policy-blending",
+   "title": "Adaptive Policy Blending in Multi-Agent RL for Cooperative Dual-Arm Alignment",
+   "tagline": "Hierarchical residual MARL with learned coordination blending",
+   "themes": [
+    "robot-learning",
+    "reinforcement-learning",
+    "dual-arm",
+    "industrial"
+   ],
+   "year": "2025",
+   "overview": "A hierarchical residual multi-agent reinforcement-learning framework that interpolates between independent per-arm dexterity and centralised coordination for cooperative dual-arm alignment.",
+   "problem": "Cooperative dual-arm tasks demand both individual arm skill and tight joint coordination; fixed analytical controllers cannot adapt this balance to the task state.",
+   "motivation": "Pre-assembly alignment and cooperative picking in industrial automation need policies that generalise beyond hard-coded models while remaining sample-efficient and stable.",
+   "methodology": "A Centralized Training, Decentralized Execution (CTDE) paradigm combines a pretrained PPO base policy with a MAPPO residual policy. A learned scale-blending parameter (alpha) dynamically interpolates between individual and centralised behaviour, trained with a 92-D global critic and 47-D local observations.",
+   "technical": "CTDE; PPO base + MAPPO residual; learned blending coefficient alpha; 92-dimensional global critic; 47-dimensional local observations; autonomous target picking and pre-assembly alignment.",
+   "results": "Enables scalable, generalisable cooperative alignment, offering an adaptive alternative to rigid analytical coordination models.",
+   "future": "Transfer to physical hardware; extension to multi-stage assembly; generalisation across object geometries and arm morphologies.",
+   "tech": [
+    "Reinforcement Learning",
+    "PPO",
+    "MAPPO",
+    "Multi-Agent RL",
+    "Isaac Lab"
+   ],
+   "publication": "gpc-prior-guided",
+   "links": {
+    "code": "",
+    "videos": [
+     {
+      "label": "Video",
+      "src": "assets/videos/8.mp4"
+     }
+    ]
+   },
+   "image": ""
+  },
+  {
+   "id": "bolt-handling",
+   "title": "Vision-Based Bolt Handling and Sorting with a Manipulator",
+   "tagline": "Deep-learning segmentation plus depth sensing for industrial fasteners",
+   "themes": [
+    "vision",
+    "industrial"
+   ],
+   "year": "2024",
+   "overview": "An automated pipeline that identifies, sizes, localises and sorts bolts in unstructured industrial environments using a manipulator.",
+   "methodology": "Deep-learning segmentation (PPLiteSeg, OCRNet, DeepLabV3+) is combined with classical vision. The segmented binary image is fused with depth from an Intel RealSense D415 to estimate bolt size, position and orientation relative to the robot base.",
+   "results": "DeepLabV3+ gave the best segmentation, with a mean IoU of 0.95 on a custom dataset covering varied environmental conditions and both new and aged bolts.",
+   "tech": [
+    "Deep Learning",
+    "DeepLabV3+",
+    "OpenCV",
+    "Intel RealSense",
+    "Pick-and-Place"
+   ],
+   "publication": "iccma2024-bolt",
+   "links": {
+    "code": "",
+    "videos": [
+     {
+      "label": "Video 1",
+      "src": "assets/videos/1.mp4"
+     },
+     {
+      "label": "Video 2",
+      "src": "assets/videos/1_1.mp4"
+     },
+     {
+      "label": "Video 3",
+      "src": "assets/videos/2.mp4"
+     }
+    ]
+   },
+   "image": ""
+  },
+  {
+   "id": "shared-vision",
+   "title": "Dual-Arm Cooperative Manipulation Through Shared Vision",
+   "tagline": "Classical-vision coordination protocol for two eye-in-hand arms",
+   "themes": [
+    "dual-arm",
+    "vision"
+   ],
+   "year": "2026",
+   "overview": "Two Kinova Gen3 Lite arms with wrist-mounted cameras search a shared workspace and coordinate pick-and-place, with no learned perception or control components.",
+   "methodology": "Each arm runs ArUco detection on its own camera; the target pose is relayed between base frames via a fixed inter-arm transform, a reachability rule selects the acting arm, and damped least-squares resolved-rate control executes the pick.",
+   "results": "Validated in Gazebo/ROS2 simulation and on physical dual-arm hardware.",
+   "tech": [
+    "ROS2",
+    "Gazebo",
+    "ArUco",
+    "Resolved-Rate Control",
+    "Kinova Gen3 Lite"
+   ],
+   "publication": "shared-vision",
+   "links": {
+    "code": "",
+    "videos": [
+     {
+      "label": "Video 1",
+      "src": "assets/videos/3.mp4"
+     },
+     {
+      "label": "Video 2",
+      "src": "assets/videos/3_1.mp4"
+     }
+    ]
+   },
+   "image": ""
+  },
+  {
+   "id": "distance-monitoring",
+   "title": "Kinematics-Based Real-Time Distance Monitoring for Multi-Arm Safety",
+   "tagline": "Sensor-free inter-link distance computation for collaborative arms",
+   "themes": [
+    "dual-arm",
+    "motion-planning",
+    "industrial"
+   ],
+   "year": "2025",
+   "overview": "A geometric, kinematics-based method that computes minimum distances between manipulator links in real time without external sensors.",
+   "methodology": "Link configurations are classified as parallel, intersecting or skew and reduced to line-segment distances; distance matrices over inter-arm link pairs support systematic collision monitoring.",
+   "results": "Hardware validation on dual Kinova Gen3 Lite manipulators for inter-arm distance computation in a shared workspace.",
+   "tech": [
+    "Kinematics",
+    "Collision Avoidance",
+    "Python",
+    "Kinova Gen3 Lite"
+   ],
+   "publication": "iccas2025-distance",
+   "links": {
+    "code": "",
+    "videos": []
+   },
+   "image": ""
+  }
+ ]
+}
