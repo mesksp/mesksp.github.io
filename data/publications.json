@@ -324,7 +324,7 @@
     {
       "id": "shared-vision",
       "type": "conference",
-      "status": "under-review",
+      "status": "accepted",
       "title": "Dual-Arm Cooperative Manipulation Through Shared Vision",
       "authors": [
         {
@@ -356,8 +356,8 @@
           "name": "A. Shukla"
         }
       ],
-      "venue": "",
-      "publisher": "",
+      "venue": "Indian Control Conference (ICC) 2026",
+      "publisher": "IEEE",
       "location": "",
       "year": 2026,
       "pages": "",
@@ -409,12 +409,12 @@
           "name": "A. Shukla"
         }
       ],
-      "venue": "",
-      "publisher": "",
+      "venue": "Array (Elsevier)",
+      "publisher": "Elsevier",
       "location": "",
       "year": 2026,
       "pages": "",
-      "doi": "",
+      "doi": "10.2139/ssrn.7305686",
       "flags": {
         "first": true,
         "corresponding": false,

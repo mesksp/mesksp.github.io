@@ -3,6 +3,18 @@
   "news": [
     {
       "date": "2026",
+      "tag": "Accepted",
+      "title": "Paper accepted at Indian Control Conference 2026",
+      "body": "Our work on dual-arm cooperative manipulation through shared vision has been accepted at the Indian Control Conference (ICC) 2026."
+    },
+    {
+      "date": "2026",
+      "tag": "Under Review",
+      "title": "Preprint on prior-guided policy learning under review at Array",
+      "body": "Prior-guided policy learning for cooperative dual-arm pre-assembly alignment is under review at Array (Elsevier); the preprint is available on SSRN (doi:10.2139/ssrn.7305686)."
+    },
+    {
+      "date": "2026",
       "tag": "Under Review",
       "title": "Paper under review at IROS 2026",
       "body": "Our work on continuous trajectory tracking for non-spherical wrist manipulators via learned differential inverse kinematics is under review for IEEE/RSJ IROS 2026."
