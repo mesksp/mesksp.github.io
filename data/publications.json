@@ -3,7 +3,7 @@
   "publications": [
     {
       "id": "iros2026-difik",
-      "type": "conference",
+      "type": "journal",
       "status": "under-review",
       "title": "Continuous Trajectory Tracking for Non-Spherical Wrist Manipulator via Coupled-Reward-Driven Differential Inverse Kinematics",
       "authors": [
@@ -30,8 +30,8 @@
           "name": "A. Shukla"
         }
       ],
-      "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
-      "publisher": "IEEE",
+      "venue": "Results in Engineering",
+      "publisher": "Elsevier",
       "location": "",
       "year": 2026,
       "pages": "",
@@ -98,8 +98,8 @@
           "name": "A. Shukla"
         }
       ],
-      "venue": "IEEE Transactions on Automation Science and Engineering (T-ASE)",
-      "publisher": "IEEE",
+      "venue": "Journal of Intelligent & Robotic Systems",
+      "publisher": "Springer",
       "location": "",
       "year": 2025,
       "pages": "",
@@ -109,7 +109,6 @@
         "corresponding": false,
         "best": false
       },
-      "note": "Revision 1 under review",
       "abstract": "Modern industrial automation demands autonomous collaborative systems capable of coordinated manipulation in workspaces with heterogeneous object arrangements. This paper presents a distance-based competitive task allocation framework for dual-arm systems, integrating real-time vision perception with collision-free motion planning. A temporal window mechanism enables each arm to evaluate object detections over five consecutive vision frames before committing to optimal distance-based selection, featuring dynamic reallocation and spatial conflict resolution at 0.01 m threshold accuracy. An improved Artificial Potential Field (iAPF) framework provides coordinated dual-arm movements through exponential goal attraction, inter-arm repulsion, home-seeking, and velocity damping forces. Simulation results validate superiority over market-based, round-robin, and fixed allocation strategies in distance efficiency, collision risk, and workspace coverage. Hardware experiments using two 6-DOF Kinova Gen3 Lite manipulators demonstrate approximately 47% average velocity improvement over fixed allocation in homogeneous scenarios with zero collisions, while mixed object scenarios confirm universal handling with approximately 11% time overhead offset by superior safety margins. The framework integrates YOLOv8 OBB detection at 30 FPS with 10 Hz control loops.",
       "keywords": [
         "Intelligent Robots",
