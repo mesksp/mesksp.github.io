@@ -753,6 +753,7 @@ ul.bullets li { list-style: disc; margin-bottom: var(--sp-2); color: var(--text)
 .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: var(--sp-4); }
 .gallery-item { border-radius: var(--radius); overflow: hidden; border: 1px solid var(--rule); }
 .gallery-item .media-ph { aspect-ratio: 4/3; margin: 0; border: 0; border-radius: 0; }
+.gallery-item .media-ph img { width: 100%; height: 100%; object-fit: contain; display: block; background: var(--surface, transparent); }
 .gallery-item .cap { padding: var(--sp-3); font-size: var(--fs-sm); color: var(--text-soft); }
 
 /* ==========================================================================
