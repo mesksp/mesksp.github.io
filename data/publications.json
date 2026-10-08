@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for all publications. To add a paper, append an object to the array below — no HTML edits required. 'me' marks the author entry to bold. Allowed type: journal | conference. Allowed status: published | accepted | under-review. Placeholders are marked PLACEHOLDER.",
+  "_comment": "Single source of truth for all publications. To add a paper, append an object to the array below, with no HTML edits required. 'me' marks the author entry to bold. Allowed type: journal | conference. Allowed status: published | accepted | under-review. Placeholders are marked PLACEHOLDER.",
   "publications": [
     {
       "id": "iros2026-difik",

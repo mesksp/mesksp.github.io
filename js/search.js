@@ -3,7 +3,7 @@
    --------------------------------------------------------------------------
    Operates on the cards rendered by publications.js using their data-* hooks
    (data-type, data-status, data-search). Filtering is done by toggling card
-   visibility — no re-render — so it scales to hundreds of entries cheaply.
+   visibility without re-rendering, so it scales to hundreds of entries cheaply.
    ========================================================================== */
 
 window.PubSearch = {

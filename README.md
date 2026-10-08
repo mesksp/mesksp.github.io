@@ -1,4 +1,4 @@
-# Surya Prakash S. K. — Academic Research Website
+# Surya Prakash S. K.: Academic Research Website
 
 Official academic homepage for **Surya Prakash S. K.**, PhD Research Scholar at the
 Centre for Artificial Intelligence and Robotics (CAIR), Indian Institute of
@@ -11,7 +11,7 @@ build step.
 
 ## Quick start
 
-It is a static site — open `index.html` directly, or serve the folder so that
+It is a static site: open `index.html` directly, or serve the folder so that
 the `fetch()`-based JSON loading works (browsers block `fetch` of local files
 over `file://`):
 
@@ -76,13 +76,13 @@ research-portfolio/
 
 ---
 
-## Editing content — JSON only
+## Editing content: JSON only
 
 Adding publications, projects, news, gallery items, or courses requires editing
 **only the JSON files** in `data/`. No HTML or JS changes are needed, and the
 design scales to 100+ entries without modification.
 
-### Add a publication — `data/publications.json`
+### Add a publication: `data/publications.json`
 
 ```json
 {
@@ -99,7 +99,7 @@ design scales to 100+ entries without modification.
   "location": "City, Country",       // optional
   "year": 2027,
   "pages": "pp. 1-8",                // optional
-  "doi": "10.xxxx/xxxxx",           // optional — DOI button + citation
+  "doi": "10.xxxx/xxxxx",           // optional: DOI button + citation
   "abstract": "…",
   "keywords": ["…", "…"],
   "flags": { "first": true, "corresponding": false, "best": false },
@@ -114,7 +114,7 @@ counters on `publications.html` update from the data; if you change the totals
 substantially, update the `data-count` values in that page's stat band so the
 count-up animation lands on the right number.
 
-### Add a project — `data/projects.json`
+### Add a project: `data/projects.json`
 
 Each project supports: `title`, `year`, `summary`, `themes` (array; see theme
 keys below), `overview`, `problem`, `motivation`, `methodology`,
@@ -126,14 +126,14 @@ keys below), `overview`, `problem`, `motivation`, `methodology`,
 
 ### Add news / gallery
 
-- `data/news.json` — newest first: `{ "date", "tag", "title", "body" }`.
-- `data/gallery.json` — `{ "category", "caption" }` (categories: `conference`,
+- `data/news.json`: newest first: `{ "date", "tag", "title", "body" }`.
+- `data/gallery.json`: `{ "category", "caption" }` (categories: `conference`,
   `lab`, `robot`, `simulation`, `demo`). Add an `image` field once you upload a
   file to `assets/images/`.
 
 ### Update name, links, navigation
 
-Edit the `SITE` object at the top of `js/components.js` — it propagates to the
+Edit the `SITE` object at the top of `js/components.js`; it propagates to the
 header, footer, and social rails everywhere.
 
 ---

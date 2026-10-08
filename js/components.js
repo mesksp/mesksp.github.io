@@ -76,7 +76,7 @@ function buildHeader() {
   header.className = "site-header";
   header.innerHTML = `
     <div class="container nav">
-      <a class="nav__brand" href="index.html" aria-label="${SITE.name} — Home">
+      <a class="nav__brand" href="index.html" aria-label="${SITE.name}, Home">
         <span class="name">${SITE.name}</span>
         <span class="role">${SITE.role} · IIT Mandi</span>
       </a>
@@ -128,7 +128,7 @@ function buildFooter() {
       <div class="footer-bottom">
         <span>© ${year} ${SITE.name}. All rights reserved.</span>
         <span>Last updated: ${SITE.lastUpdated} · Visitors:
-          <span id="visitor-count" aria-label="Visitor count">—</span>
+          <span id="visitor-count" aria-label="Visitor count">-</span>
         </span>
       </div>
     </div>`;
@@ -207,7 +207,7 @@ function initVisitorCounter() {
     }
     el.textContent = (1240 + n).toLocaleString(); // seeded baseline
   } catch (e) {
-    el.textContent = "—";
+    el.textContent = "-";
   }
 }
 

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Surya Prakash S. K. — Academic Research Website
+   Surya Prakash S. K.: Academic Research Website
    style.css  |  Core design system: tokens, typography, layout, components
    --------------------------------------------------------------------------
    Section index:
@@ -829,3 +829,17 @@ ul.bullets li { list-style: disc; margin-bottom: var(--sp-2); color: var(--text)
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 .loading { color: var(--text-faint); font-size: var(--fs-sm); padding: var(--sp-5); }
+
+/* Justified body text (hyphenation keeps word spacing even) */
+main p, .pub__abstract, .fc-block p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+main .text-center, main .text-center p, main p.text-center,
+.stat, .stat p, .theme-card p.card__meta, .card__meta, .breadcrumb {
+  text-align: center;
+  hyphens: manual;
+}
+.card__meta, .breadcrumb { text-align: left; }

@@ -1,12 +1,12 @@
 {
   "_comment": "Gallery items. Set 'image' to a file under assets/images/. Categories: conference | lab | robot | demo (simulation is also supported by the renderer).",
   "items": [
-    { "category": "conference", "image": "assets/images/case_2024.jpg", "caption": "IEEE CASE 2024 — Bari, Italy" },
-    { "category": "conference", "image": "assets/images/iccma_2024.jpg", "caption": "ICCMA 2024 — London, United Kingdom" },
-    { "category": "conference", "image": "assets/images/iccas_2025.gif", "caption": "ICCAS 2025 — Incheon, Republic of Korea" },
-    { "category": "robot", "image": "assets/images/dual_arm_workcell.jpg", "caption": "Dual-arm Kinova Gen3 Lite workcell — front and side views with RGB-D camera and bins" },
-    { "category": "lab", "image": "assets/images/cair_lab_group.jpg", "caption": "CAIR, IIT Mandi — Drone Lab building with the research group" },
-    { "category": "lab", "image": "assets/images/cair_lab_visit.jpg", "caption": "CAIR robotics laboratory — Kinova Gen3 Lite arm on the lab bench" },
-    { "category": "demo", "image": "assets/images/collision_sorting_demo.png", "caption": "Collision-aware object sorting demonstration — dual-arm bolt and nut sorting sequence" }
+    { "category": "conference", "image": "assets/images/case_2024.jpg", "caption": "IEEE CASE 2024, Bari, Italy" },
+    { "category": "conference", "image": "assets/images/iccma_2024.jpg", "caption": "ICCMA 2024, London, United Kingdom" },
+    { "category": "conference", "image": "assets/images/iccas_2025.gif", "caption": "ICCAS 2025, Incheon, Republic of Korea" },
+    { "category": "robot", "image": "assets/images/dual_arm_workcell.jpg", "caption": "Dual-arm Kinova Gen3 Lite workcell: front and side views with RGB-D camera and bins" },
+    { "category": "lab", "image": "assets/images/cair_lab_group.jpg", "caption": "CAIR, IIT Mandi: Drone Lab building with the research group" },
+    { "category": "lab", "image": "assets/images/cair_lab_visit.jpg", "caption": "CAIR robotics laboratory: Kinova Gen3 Lite arm on the lab bench" },
+    { "category": "demo", "image": "assets/images/collision_sorting_demo.png", "caption": "Collision-aware object sorting demonstration: dual-arm bolt and nut sorting sequence" }
   ]
 }
