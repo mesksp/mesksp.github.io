@@ -153,16 +153,17 @@
           <ul class="bullets" style="padding-left: var(--sp-5); list-style: disc;"><li>Learning controllers that generalise across large, continuous regions of the workspace.</li><li>Achieving zero-shot sim-to-real transfer without per-task retuning.</li><li>Designing observation and action representations that make learning efficient and stable.</li></ul>
           <h3>Current work</h3>
           <p>I trained a learned differential inverse-kinematics policy with PPO in Isaac Lab over roughly 1.5 million reachable poses, mapping a 25-dimensional pose-error representation to joint velocities for continuous trajectory tracking on a non-spherical-wrist manipulator. The policy transfers zero-shot to a real Kinova Gen3 Lite operating at 20 Hz, demonstrating that large-scale simulated training can yield controllers that work directly on hardware.</p>
+          <p>I also developed Gated Prior Composition (GPC), a hierarchical framework for cooperative dual-arm pre-assembly alignment. A single-arm reaching policy is first trained with PPO and frozen; a coordination policy is then trained against it with Multi-Agent PPO under centralised training and decentralised execution, and the two outputs are blended through a per-arm gating scalar that adapts to the task phase. The framework reaches 95.9% reach and 93.9% alignment success in simulation and transfers directly to two Kinova Gen3 Lite arms, with 90.0% alignment success over 30 hardware trials.</p>
           <h3>Future directions</h3>
           <p>I want to extend learned controllers from single skills toward repertoires of manipulation behaviours, study how learned and model-based components should be composed, and improve the data efficiency and reliability of transfer so that learning scales to richer, contact-heavy tasks.</p>
           <div class="grid grid-2" style="margin-top: var(--sp-5);">
             <div>
               <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related publications</h4>
-              <p><a class="link-arrow" href="publications.html">Results in Engineering (under review) — Learned differential IK</a></p>
+              <p><a class="link-arrow" href="publications.html">Results in Engineering (under review) — Learned differential IK</a></p><p><a class="link-arrow" href="publications.html">Array (under review) — Prior-guided policy learning for dual-arm alignment</a></p>
             </div>
             <div>
               <h4 style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:var(--sp-2);">Related projects</h4>
-              <p><a class="link-arrow" href="projects.html">Continuous trajectory tracking via learned differential IK</a></p>
+              <p><a class="link-arrow" href="projects.html">Adaptive policy blending in MARL</a></p><p><a class="link-arrow" href="projects.html">Continuous trajectory tracking via learned differential IK</a></p>
             </div>
           </div>
         </div>
