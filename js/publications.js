@@ -79,6 +79,12 @@ const PUB = {
     return lines.join("\n");
   },
 
+  themeLabels: {
+    "single-arm": "Single-Arm Vision & Learning",
+    "dual-arm-planning": "Perception-Based Dual-Arm Motion Planning",
+    "rl": "Reinforcement-Learning-Based Manipulation"
+  },
+
   card(p) {
     const badges = [];
     badges.push(`<span class="tag tag--navy">${p.type === "journal" ? "Journal" : "Conference"}</span>`);
@@ -104,8 +110,12 @@ const PUB = {
     const keywords = (p.keywords || [])
       .map(k => `<span class="tag">${window.escapeHTML(k)}</span>`).join("");
 
+    const themeNames = (p.themes || []).map(t => this.themeLabels[t] || t);
+    const themeTags = themeNames
+      .map(t => `<span class="tag tag--navy">${window.escapeHTML(t)}</span>`).join("");
+
     const searchText = [
-      p.title, venueLine, ...(p.keywords || []),
+      p.title, venueLine, ...themeNames, ...(p.keywords || []),
       ...p.authors.map(a => a.name)
     ].join(" ").toLowerCase();
 
@@ -113,6 +123,7 @@ const PUB = {
     el.className = "pub reveal";
     el.dataset.type = p.type;
     el.dataset.status = p.status;
+    el.dataset.themes = (p.themes || []).join(" ");
     el.dataset.search = searchText;
     el.innerHTML = `
       <div class="pub__top">${badges.join("")}</div>
@@ -121,6 +132,7 @@ const PUB = {
       <p class="pub__venue">${window.escapeHTML(venueLine)}
          <span class="year">${p.year}</span>${meta ? " · " + window.escapeHTML(meta) : ""}${note}</p>
       ${p.abstract ? `<p class="pub__abstract">${window.escapeHTML(p.abstract)}</p>` : ""}
+      ${themeTags ? `<div class="pub__keywords">${themeTags}</div>` : ""}
       ${keywords ? `<div class="pub__keywords">${keywords}</div>` : ""}
       <div class="pub__actions">${actions.join("")}</div>
       <pre class="pub__bibtex">${window.escapeHTML(this.bibtex(p))}</pre>`;

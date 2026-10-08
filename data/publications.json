@@ -67,7 +67,11 @@
             "src": "assets/videos/7_2.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "single-arm",
+        "rl"
+      ]
     },
     {
       "id": "tase2025-cta",
@@ -126,7 +130,10 @@
             "src": "assets/videos/6.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "dual-arm-planning"
+      ]
     },
     {
       "id": "frobt2025-iapf",
@@ -175,7 +182,10 @@
             "src": "assets/videos/5.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "dual-arm-planning"
+      ]
     },
     {
       "id": "iccas2025-distance",
@@ -222,7 +232,10 @@
         "pdf": "assets/papers/4.pdf",
         "code": "",
         "videos": []
-      }
+      },
+      "themes": [
+        "dual-arm-planning"
+      ]
     },
     {
       "id": "case2024-bolt",
@@ -271,7 +284,10 @@
             "src": "assets/videos/2.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "single-arm"
+      ]
     },
     {
       "id": "iccma2024-bolt",
@@ -318,7 +334,10 @@
             "src": "assets/videos/1_1.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "single-arm"
+      ]
     },
     {
       "id": "shared-vision",
@@ -386,7 +405,10 @@
             "src": "assets/videos/3_1.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "dual-arm-planning"
+      ]
     },
     {
       "id": "gpc-prior-guided",
@@ -435,7 +457,10 @@
             "src": "assets/videos/8.mp4"
           }
         ]
-      }
+      },
+      "themes": [
+        "rl"
+      ]
     }
   ]
 }

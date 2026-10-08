@@ -29,7 +29,7 @@ python3 -m http.server 8000
 research-portfolio/
 ├── index.html          Home (hero, stats, research snapshot, recent news)
 ├── about.html          Biography, journey, vision, philosophy, skills
-├── research.html       Seven research themes (anchored sections)
+├── research.html       Three research themes (anchored sections)
 ├── projects.html       Project cards (rendered from data/projects.json)
 ├── publications.html   Searchable/filterable publications + stats
 ├── teaching.html       Assistantships and prior instruction
@@ -124,8 +124,7 @@ keys below), `overview`, `problem`, `motivation`, `methodology`,
 (`paper`/`code`/`video`), and `publication` cross-reference.
 
 **Theme keys** (used by the project filter and the research page):
-`vision`, `dual-arm`, `robot-learning`, `reinforcement-learning`,
-`motion-planning`, `embodied-ai`, `industrial`.
+`single-arm`, `dual-arm-planning`, `rl` (also used by `data/publications.json`).
 
 ### Add news / gallery / teaching
 

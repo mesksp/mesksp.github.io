@@ -6,8 +6,8 @@
    "title": "Learned Differential Inverse Kinematics for Non-Spherical Wrist Manipulators",
    "tagline": "Zero-shot sim-to-real trajectory tracking via reinforcement learning",
    "themes": [
-    "robot-learning",
-    "reinforcement-learning"
+    "single-arm",
+    "rl"
    ],
    "year": "2025–2026",
    "overview": "A reinforcement-learning controller that performs continuous, accurate end-effector trajectory tracking on manipulators whose wrist geometry breaks the assumptions behind closed-form inverse kinematics.",
@@ -50,9 +50,7 @@
    "title": "Competitive Task Allocation with Real-Time Collision Avoidance for Dual-Arm Manipulation",
    "tagline": "Spatially and temporally aware coordination for cooperating arms",
    "themes": [
-    "dual-arm",
-    "motion-planning",
-    "industrial"
+    "dual-arm-planning"
    ],
    "year": "2024–2025",
    "overview": "A proximity-based competitive task-allocation framework that lets two arms decide, in real time, which arm services which target while guaranteeing inter-arm safety.",
@@ -87,9 +85,7 @@
    "title": "Improved Artificial Potential Field for Dual-Arm Manipulation",
    "tagline": "Real-time inter-arm collision avoidance for asymmetric arms",
    "themes": [
-    "dual-arm",
-    "motion-planning",
-    "vision"
+    "dual-arm-planning"
    ],
    "year": "2024–2025",
    "overview": "An improved Artificial Potential Field (iAPF) method that delivers autonomous, collision-aware motion for asymmetric dual-arm manipulators during shared-workspace tasks.",
@@ -123,10 +119,7 @@
    "title": "Adaptive Policy Blending in Multi-Agent RL for Cooperative Dual-Arm Alignment",
    "tagline": "Hierarchical residual MARL with learned coordination blending",
    "themes": [
-    "robot-learning",
-    "reinforcement-learning",
-    "dual-arm",
-    "industrial"
+    "rl"
    ],
    "year": "2025",
    "overview": "A hierarchical residual multi-agent reinforcement-learning framework that interpolates between independent per-arm dexterity and centralised coordination for cooperative dual-arm alignment.",
@@ -160,8 +153,7 @@
    "title": "Vision-Based Bolt Handling and Sorting with a Manipulator",
    "tagline": "Deep-learning segmentation plus depth sensing for industrial fasteners",
    "themes": [
-    "vision",
-    "industrial"
+    "single-arm"
    ],
    "year": "2024",
    "overview": "An automated pipeline that identifies, sizes, localises and sorts bolts in unstructured industrial environments using a manipulator.",
@@ -199,8 +191,7 @@
    "title": "Dual-Arm Cooperative Manipulation Through Shared Vision",
    "tagline": "Classical-vision coordination protocol for two eye-in-hand arms",
    "themes": [
-    "dual-arm",
-    "vision"
+    "dual-arm-planning"
    ],
    "year": "2026",
    "overview": "Two Kinova Gen3 Lite arms with wrist-mounted cameras search a shared workspace and coordinate pick-and-place, with no learned perception or control components.",
@@ -234,9 +225,7 @@
    "title": "Kinematics-Based Real-Time Distance Monitoring for Multi-Arm Safety",
    "tagline": "Sensor-free inter-link distance computation for collaborative arms",
    "themes": [
-    "dual-arm",
-    "motion-planning",
-    "industrial"
+    "dual-arm-planning"
    ],
    "year": "2025",
    "overview": "A geometric, kinematics-based method that computes minimum distances between manipulator links in real time without external sensors.",

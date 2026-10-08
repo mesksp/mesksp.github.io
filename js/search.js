@@ -41,6 +41,8 @@ window.PubSearch = {
     if (f === "journal" || f === "conference") return card.dataset.type === f;
     if (f === "published" || f === "under-review" || f === "accepted")
       return card.dataset.status === f;
+    if (f in { "single-arm": 1, "dual-arm-planning": 1, "rl": 1 })
+      return (card.dataset.themes || "").split(" ").includes(f);
     return true;
   },
 

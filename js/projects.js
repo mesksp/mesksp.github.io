@@ -13,14 +13,11 @@ const PROJ = {
   pubIndex: {},
 
   themeLabels: {
-    "vision": "Vision-Based Manipulation",
-    "dual-arm": "Dual-Arm Manipulation",
-    "robot-learning": "Robot Learning",
-    "reinforcement-learning": "Reinforcement Learning",
-    "motion-planning": "Motion Planning",
-    "embodied-ai": "Embodied AI",
-    "industrial": "Industrial Robotics"
+    "single-arm": "Single-Arm Vision & Learning",
+    "dual-arm-planning": "Perception-Based Dual-Arm Motion Planning",
+    "rl": "Reinforcement-Learning-Based Manipulation"
   },
+
 
   async init() {
     const mount = document.getElementById("project-list");
