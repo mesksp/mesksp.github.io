@@ -23,7 +23,7 @@ const SITE = {
     cv:        "assets/Documents/SuryaPrakash_CV.pdf",
     scholar:   "https://scholar.google.com/citations?user=NJhUjFQAAAAJ&hl=en",
     orcid:     "https://orcid.org/0009-0006-3327-8019",
-    github:    "https://github.com/suryaroboticarm",
+    github:    "https://github.com/mesksp",
     linkedin:  "https://www.linkedin.com/in/surya-prakash-s-k-7517b2157/",
     email:     "mailto:s.surya1754@gmail.com"
   },
